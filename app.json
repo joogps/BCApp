@@ -1,18 +1,28 @@
 {
   "expo": {
-    "name": "BCAppTemp",
-    "slug": "BCAppTemp",
-    "version": "1.0.0",
+    "name": "BC2026",
+    "slug": "BCApp",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FFFAEE"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": "./assets/app.icon",
+      "bundleIdentifier": "br.com.brazilconference",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "buildNumber": "12",
+      "appleTeamId": "V9F4J6KX54"
     },
     "android": {
       "adaptiveIcon": {
@@ -21,10 +31,20 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "br.com.appbrazilconference",
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2a7cae71-50ca-48d3-9eb2-6d7d353fe3cb"
+      }
     }
   }
 }
